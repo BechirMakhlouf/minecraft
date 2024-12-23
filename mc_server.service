@@ -1,0 +1,13 @@
+[Unit]
+Description=minecraft server
+After=network.target
+
+[Service]
+WorkingDirectory=/minecraft
+ExecStart=java -jar server.jar
+Restart=always
+User=nobody
+Group=nogroup
+
+[Install]
+WantedBy=multi-user.target
